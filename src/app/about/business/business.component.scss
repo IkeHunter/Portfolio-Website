@@ -1,0 +1,105 @@
+@import "main";
+
+.business {
+  height: 110vh;
+  background-color: $color-grey;
+  color: $color-white;
+}
+
+.title {
+  margin-left: 10rem;
+
+  &__sub {
+    display: block;
+    font-size: 4rem;
+    font-weight: 100;
+  }
+  &__main {
+    display: block;
+    font-size: 6.5rem;
+    font-weight: 400;
+  }
+}
+
+.grid {
+  margin-top: 10rem;
+  padding: 2rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.box {
+  flex: 1 1 50%;
+
+  display: flex;
+  justify-content: space-evenly;
+
+  padding: 10rem 5rem;
+
+
+  &:hover {
+    .box__container--title {
+      &::after {
+        content: "";
+        display: block;
+        width: 90%;
+        border-bottom: 3px solid $color-secondary;
+        position: absolute;
+
+        transition: width .5s;
+      }
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+
+    &--icon {
+      $ico-size: 8.5rem;
+
+      fill: $color-primary;
+      height: $ico-size;
+      width: $ico-size;
+    }
+
+
+    // align-self: center;
+  }
+  &__container {
+    padding-left: 5rem;
+
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column;
+
+    &--title {
+      text-transform: uppercase;
+      font-family: 'Roboto', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      position: relative;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 0%;
+        border-bottom: 3px solid $color-secondary;
+        position: absolute;
+
+        transition: width .5s;
+      }
+
+    }
+
+    &--content {
+      width: 88%;
+      font-size: 2.3rem;
+      font-weight: 200;
+      margin-top: .5rem;
+    }
+  }
+
+}
