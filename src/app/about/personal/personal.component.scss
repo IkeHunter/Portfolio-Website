@@ -1,6 +1,6 @@
 @import 'main';
 
-.personal {
+.section-personal {
   height: 100vh;
   background-color: $color-grey;
   color: $color-white;
@@ -39,7 +39,7 @@
 
   z-index: 2;
   &__text {
-    font-size: 7rem;
+    font-size: 6rem;
 
   }
   &__img {
