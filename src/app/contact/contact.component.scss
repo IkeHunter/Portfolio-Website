@@ -1,0 +1,126 @@
+@import 'main';
+
+.section-contact {
+  height: 100vh;
+  // background-color: $color-primary-dark;
+  background-image: radial-gradient(ellipse at 70% 40%, $color-primary, $color-primary-dark);
+  color: $color-white;
+
+
+  &__container {
+    height: 80%;
+    display: flex;
+    align-items: center;
+  }
+  &__text {
+    flex: 0 0 50%;
+
+    text-align: center;
+
+    &--h1 {
+      font-size: 4rem;
+      font-weight: 400;
+    }
+  }
+  &__card {
+    $left-margin: 10%;
+    flex: 0 0 50%;
+    color: $color-grey;
+
+
+    &__container {
+      position: relative;
+
+      background-color: $color-white;
+      cursor: pointer;
+      width: 80%;
+      height: 19rem;
+      border-radius: 15px;
+      box-shadow: 0.5rem 0.5rem 5rem rgba($color-grey, 0.6);
+      transition: box-shadow 1s, transform 1s;
+
+      &:hover {
+        box-shadow: 1.8rem 2.3rem 3rem rgba($color-grey, 0.85);
+        transform: scale(1.02) translate(-3%, -4%);
+
+
+      }
+      &:active {
+        .section-contact__card__email-block {
+          width: 80%;
+        }
+      }
+
+    }
+    &__email-block {
+      position: absolute;
+      top: 75%;
+      left: $left-margin;
+      transform: translateY(-100%);
+      width: 75%;
+      transition: width 1s;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &--text {
+      position: absolute;
+      top: 25%;
+      left: $left-margin;
+
+      font-size: 3rem;
+      font-weight: 100;
+
+      flex: 0 0 80%;
+    }
+    &--email {
+      font-size: 3rem;
+      font-weight: 600;
+    }
+    &--icon {
+      $ico-size: 3.5rem;
+
+      fill: $color-secondary;
+      width: $ico-size;
+      height: $ico-size;
+
+      flex: 0 0 10%;
+    }
+  }
+}
+
+.footer {
+  border-top: 5px solid $color-white;
+  position: relative;
+  height: 20%;
+  &__container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+    height: 90%;
+
+    &--link {
+      &:link,
+      &:visited {
+        text-decoration: none;
+        color: $color-white;
+        font-size: 3rem;
+
+        flex: 0 0 10%;
+        text-align: center;
+      }
+
+    }
+  }
+  &__copyright {
+    position: absolute;
+    top: 80%;
+    right: 3%;
+
+    font-size: 1.5rem;
+    font-weight: 100;
+  }
+}
