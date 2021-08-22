@@ -1,9 +1,11 @@
 @import "main";
 
 .section-business {
-  height: 125vh;
+  // height: 125vh;
+  height: 100%;
   background-color: $color-grey;
   color: $color-white;
+  padding-bottom: 5rem;
 }
 
 .title {
