@@ -15,6 +15,11 @@
     bottom: -10rem;
     right: -10rem;
     border-radius: 100%;
+
+    @include respond(phone) {
+      opacity: 35%;
+      right: -30rem;
+    }
   }
 }
 
@@ -97,17 +102,37 @@
   left: 8%;
   transform: translateY(-50%);
 
+
   color: $color-grey;
+
+  @include respond(phone) {
+    top: 40%;
+    left: 0%;
+    width: 100%;
+  }
 
   &__primary {
     font-size: 9rem;
     font-weight: 500;
+
+    @include respond(phone) {
+      font-size: 4.5rem;
+      text-align: center;
+    }
   }
   &__secondary {
     font-size: 6.5rem;
     font-weight: 200;
     padding-top: 1.5rem;
+
+    @include respond(phone) {
+      font-size: 4rem;
+      text-align: center;
+    }
   }
+
+
+
 }
 
 .hero-arrow {
