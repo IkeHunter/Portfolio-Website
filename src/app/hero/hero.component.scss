@@ -17,7 +17,6 @@
     border-radius: 100%;
 
     @include respond(phone) {
-      opacity: 35%;
       right: -30rem;
     }
   }
