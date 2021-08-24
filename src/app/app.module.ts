@@ -10,6 +10,7 @@ import { PersonalComponent } from './about/personal/personal.component';
 import { BusinessComponent } from './about/business/business.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
+import { NavigationComponent } from './hero/navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ContactComponent } from './contact/contact.component';
     PersonalComponent,
     BusinessComponent,
     ProjectsComponent,
-    ContactComponent
+    ContactComponent,
+    NavigationComponent
 
 
   ],
