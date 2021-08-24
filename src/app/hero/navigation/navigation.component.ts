@@ -12,4 +12,8 @@ export class NavigationComponent implements OnInit {
   ngOnInit() {
   }
 
+  uncheck() {
+    (document.getElementById('navi-toggle') as HTMLInputElement).checked = false;
+  }
+
 }

@@ -2,7 +2,7 @@
 
 .nav-active {
   color: $color-grey !important;
-  @include respond(phone) {
+  @include respond(tab-port) {
     color: $color-white !important;
   }
 }
@@ -22,7 +22,7 @@
   padding: 0 5rem;
   z-index: 100;
 
-  @include respond(phone) {
+  @include respond(tab-port) {
     padding: 0;
     color: $color-white;
   }
@@ -45,7 +45,7 @@
       transform: translateX(-50%);
       transition: all .4s;
 
-      @include respond(phone) {
+      @include respond(tab-port) {
         display: none;
         visibility: hidden;
       }
@@ -100,7 +100,7 @@
           transform: translateX(-50%);
         }
 
-        @include respond(phone) {
+        @include respond(tab-port) {
           font-size: 2rem;
           margin-left: 2rem;
         }
@@ -115,7 +115,7 @@
     &__img {
       width: 6rem;
 
-      @include respond(phone) {
+      @include respond(tab-port) {
         position: absolute;
         top: 3rem;
         left: 3rem;
@@ -131,7 +131,7 @@
     align-items: center;
     justify-content: flex-end;
     width: 30%;
-    @include respond(phone) {
+    @include respond(tab-port) {
       opacity: 0;
       width: 0;
       visibility: hidden;
@@ -158,7 +158,7 @@
       }
     }
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       position: absolute;
       top: 40%;
       left: 50%;
@@ -174,20 +174,20 @@
   #nav-home {
     display: none;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       display: block;
     }
   }
 
   &__item {
-    @include respond(phone) {
+    @include respond(tab-port) {
       flex: 0 0 100%;
       margin: 0 !important;
       padding-block: 3rem;
 
 
       &::before {
-        content: '+';
+        content: '>';
         position: absolute;
 
         font-size: 5rem;
@@ -204,7 +204,7 @@
       margin: 0 1rem;
       font-weight: 500;
 
-      @include respond(phone) {
+      @include respond(tab-port) {
         font-size: 5rem;
         font-weight: 700;
         padding-left: 3rem;
@@ -221,7 +221,7 @@
 
   &__button {
     display: none;
-    @include respond(phone) {
+    @include respond(tab-port) {
       display: inline-block;
       background-color: $color-white;
       height: 7rem;
@@ -238,7 +238,7 @@
   }
 
   &__background {
-    @include respond(phone) {
+    @include respond(tab-port) {
       height: 6rem;
       width: 6rem;
       border-radius: 60%;

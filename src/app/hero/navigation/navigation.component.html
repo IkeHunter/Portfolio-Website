@@ -19,10 +19,10 @@
 
   <div class="navigation__container">
     <ul class="navigation__list">
-      <li class="navigation__item"><a routerLink="/" class="navigation__link navigation__animation" id="nav-home">Home</a></li>
-      <li class="navigation__item"><a routerLink="/" class="navigation__link navigation__animation" id="nav-services">About</a></li>
-      <li class="navigation__item"><a routerLink="/" class="navigation__link navigation__animation" id="nav-portfolio">Portfolio</a></li>
-      <li class="navigation__item"><a routerLink="/" class="navigation__link navigation__animation" id="nav-contact">Contact</a></li>
+      <li class="navigation__item"><a [routerLink]="['/']" fragment="home" class="navigation__link navigation__animation" id="nav-home" (click)="uncheck()">Home</a></li>
+      <li class="navigation__item"><a [routerLink]="['/']" fragment="about" class="navigation__link navigation__animation" id="nav-about" (click)="uncheck()">About</a></li>
+      <li class="navigation__item"><a [routerLink]="['/']" fragment="portfolio" class="navigation__link navigation__animation" id="nav-portfolio" (click)="uncheck()">Portfolio</a></li>
+      <li class="navigation__item"><a [routerLink]="['/']" fragment="contact" class="navigation__link navigation__animation" id="nav-contact" (click)="uncheck()">Contact</a></li>
     </ul>
   </div>
 </nav>
