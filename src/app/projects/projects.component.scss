@@ -4,6 +4,7 @@
   min-height: 110vh;
   background-color: $color-white;
   padding-bottom: 10rem;
+  overflow: hidden;
 
   &__title {
     text-transform: uppercase;
@@ -15,6 +16,15 @@
 
     padding-top: 10rem;
     margin-left: 8rem;
+
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+      margin: 0;
+    }
+    @include respond(phone) {
+      font-size: 6rem;
+    }
   }
 
   &__grid {
@@ -23,6 +33,12 @@
     flex-flow: row wrap;
 
     padding: 12.5rem 7rem 4rem 7rem;
+
+    @include respond(phone) {
+      padding-left: 0;
+      padding-right: 0;
+      justify-content: center;
+    }
   }
 }
 
@@ -37,6 +53,14 @@
   align-items: center;
 
   margin-bottom: 7rem;
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    flex: 0 0 50%;
+  }
+  @include respond(phone) {
+    flex: 0 0 100%;
+  }
 
   &__box {
     position: relative;
