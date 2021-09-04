@@ -41,8 +41,8 @@
       border-bottom: 3px solid $color-primary;
       position: absolute;
       top: 0;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 0%;
+      // transform: translateX(-50%);
       transition: all .4s;
 
       @include respond(tab-port) {
@@ -52,7 +52,7 @@
     }
     &:hover {
       &::after {
-        width: 90%;
+        width: 100%;
 
       }
     }

@@ -136,9 +136,11 @@
 
 .hero-arrow {
   position: absolute;
-  top: 80%;
+  top: 85%;
   left: 50%;
   transform: translateX(-50%);
+
+  animation: pulse 4s infinite;
   &__icon {
     width: 7rem;
     height: 7rem;
