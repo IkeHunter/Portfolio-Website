@@ -49,3 +49,12 @@
     transform: translate(15%, -5%);
   }
 }
+
+@keyframes hero-icon {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

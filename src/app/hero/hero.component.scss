@@ -84,7 +84,11 @@
   left: 50%;
   transform: translateX(-50%);
 
-  animation: pulse 4s infinite;
+  opacity: 0;
+  animation: pulse 4s infinite, hero-icon 2s ease-out;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+
   &__icon {
     width: 7rem;
     height: 7rem;

@@ -9,7 +9,7 @@ export class DataService {
 
   constructor(private http: HttpClient) {
 
-    this.http.get('http://admin.ikehunter.com/wp-json/wp/v2/projects')
+    this.http.get('https://admin.ikehunter.com/wp-json/wp/v2/projects')
 
     .subscribe(data => {
       for (const key in Object.keys(data)) {
