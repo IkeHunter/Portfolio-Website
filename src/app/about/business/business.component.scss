@@ -5,12 +5,14 @@
   height: 100%;
   background-color: $color-grey;
   color: $color-white;
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
   overflow: hidden;
 
   @include respond(phone) {
     padding-top: 10rem;
   }
+
+  
 }
 
 .title {

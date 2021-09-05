@@ -16,83 +16,13 @@
     right: -10rem;
     border-radius: 100%;
 
+    animation: hero-circle 90s infinite;
+    animation-timing-function: linear;
+
     @include respond(phone) {
       right: -30rem;
     }
   }
-}
-
-.navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  font-weight: 400;
-  padding: 2rem 6rem;
-
-  &__logo {
-    font-size: 2.5rem;
-    color: $color-grey;
-    position: relative;
-
-    &:after {
-      content: "";
-      display: block;
-      border-bottom: 3px solid $color-primary;
-      border-radius: 100px;
-      width: 80%;
-      margin: 0 auto;
-    }
-  }
-
-  &__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-
-    list-style-type: none;
-
-    & > * {
-      &:not(:last-child) {
-        margin-right: 5rem;
-      }
-    }
-  }
-
-  &__item {
-    position: relative;
-
-
-    &:after {
-      content: "";
-      display: block;
-      border-bottom: 2.5px solid $color-primary;
-
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 0%;
-      height: 100%;
-
-      transition: width .4s;
-    }
-
-    &:hover{
-      &:after {
-        width: 100%;
-      }
-    }
-
-    &--link {
-      &:link,
-      &:visited {
-        text-decoration: none;
-        color: $color-grey;
-        font-size: 2.2rem;
-      }
-    }
-  }
-
 }
 
 .hero-text {
@@ -114,6 +44,12 @@
     font-size: 9rem;
     font-weight: 500;
 
+    // transform: translateX(-100%);
+    opacity: 0;
+    animation: primary-header 1.5s ease-out;
+    animation-fill-mode: forwards;
+
+
     @include respond(phone) {
       font-size: 4.5rem;
       text-align: center;
@@ -123,6 +59,14 @@
     font-size: 6.5rem;
     font-weight: 200;
     padding-top: 1.5rem;
+
+    // transform: translateX(-100%);
+    opacity: 0;
+
+    animation: primary-header 1s cubic-bezier(.18,.46,.43,.97);
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+
 
     @include respond(phone) {
       font-size: 4rem;

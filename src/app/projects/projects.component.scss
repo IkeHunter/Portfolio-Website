@@ -5,6 +5,28 @@
   background-color: $color-white;
   padding-bottom: 10rem;
   overflow: hidden;
+  position: relative;
+
+  &__circle {
+    width: 60rem;
+    height: 57rem;
+    background-color: $color-primary;
+    opacity: 40%;
+    position: absolute;
+    top: 30%;
+    right: -10rem;
+    border-radius: 100%;
+    z-index: 0;
+
+    animation: hero-circle 70s infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+
+    @include respond(phone) {
+      right: -30rem;
+    }
+  }
+
 
   &__title {
     text-transform: uppercase;
@@ -31,6 +53,11 @@
     display: flex;
     justify-content: flex-start;
     flex-flow: row wrap;
+
+    & > * {
+      z-index: 1;
+    }
+
 
     padding: 12.5rem 7rem 4rem 7rem;
 

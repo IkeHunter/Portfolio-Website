@@ -1,5 +1,33 @@
 @import 'main';
 
+.about-container {
+  background-color: $color-white;
+  // overflow-x: hidden;
+}
 .section-about {
   background-color: $color-grey;
+}
+.shape {
+  width: 105%;
+  height: 7rem;
+  background-color: $color-grey;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  margin-top: -1px;
+
+
+
+  &__container {
+    position: relative;
+    overflow: hidden;
+    &::after {
+      content: '';
+      display: block;
+      margin-top: -6rem;
+      width: 105%;
+      height: 8rem;
+      background-color: $color-primary;
+      clip-path: polygon(0 85%, 100% 0, 100% 15%, 0 100%);
+
+    }
+  }
 }
