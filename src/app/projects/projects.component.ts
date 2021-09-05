@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
-import { Project } from './project.module';
+import { Project } from './project.model';
 
 @Component({
   selector: 'app-projects',

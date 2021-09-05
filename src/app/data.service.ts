@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Project } from './projects/project.module';
+import { Project } from './projects/project.model';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class DataService {
 
   projects = [];
@@ -14,14 +12,13 @@ export class DataService {
     this.http.get('http://admin.ikehunter.com/wp-json/wp/v2/projects')
 
     .subscribe(data => {
-
-      for(var key in Object.keys(data)) {
-        let newProject = new Project(data[key].project, data[key].info, data[key].image.guid, data[key].link);
-        this.projects.push(newProject);
-
+      for (const key in Object.keys(data)) {
+        if (data[key]) {
+          const newProject = new Project(data[key].project, data[key].info, data[key].image.guid, data[key].link);
+          this.projects.push(newProject);
+        }
       }
-
-    })
+    });
   }
 
   returnProjects() {

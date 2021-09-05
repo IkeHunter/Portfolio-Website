@@ -11,6 +11,7 @@ import { BusinessComponent } from './about/business/business.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { NavigationComponent } from './hero/navigation/navigation.component';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { NavigationComponent } from './hero/navigation/navigation.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ DataService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
