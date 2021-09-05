@@ -2,7 +2,6 @@
 
 .section-contact {
   height: 100vh;
-  // background-color: $color-primary-dark;
   background-image: radial-gradient(ellipse at 70% 40%, $color-primary, $color-primary-dark);
   color: $color-white;
 
@@ -135,6 +134,11 @@
 
         flex: 0 0 10%;
         text-align: center;
+        transition: all .15s;
+
+        &:hover {
+          transform: rotate(-2deg) scale(1.08);
+        }
 
         @include respond(phone) {
           font-size: 2rem;
