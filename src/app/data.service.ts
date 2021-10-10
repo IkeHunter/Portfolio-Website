@@ -6,6 +6,7 @@ import { Project } from './projects/project.model';
 export class DataService {
 
   projects = [];
+  resume;
 
   constructor(private http: HttpClient) {
 
@@ -19,6 +20,7 @@ export class DataService {
         }
       }
     });
+
   }
 
   returnProjects() {
