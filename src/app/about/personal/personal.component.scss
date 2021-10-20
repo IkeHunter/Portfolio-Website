@@ -51,7 +51,7 @@
       }
       &:hover {
 
-        transform: scale(1.1);
+        transform: scale(1.05);
       }
     }
 
@@ -73,7 +73,7 @@
     animation-direction: alternate;
     animation-delay: 5s;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       width: 30rem;
       height: 30rem;
     }
@@ -91,7 +91,7 @@
 
   z-index: 2;
 
-  @include respond(phone) {
+  @include respond(tab-port) {
     align-items: center;
     padding: 0;
     flex: 0 0 100%;
@@ -137,7 +137,7 @@
 
   z-index: 2;
 
-  @include respond(phone) {
+  @include respond(tab-port) {
     flex: 0 0 100%;
     text-align: center;
     padding: 3rem;
@@ -151,7 +151,7 @@
     font-weight: 200;
     line-height: 4rem;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       width: 100%;
     }
 

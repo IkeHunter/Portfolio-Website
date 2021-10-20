@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonalComponent implements OnInit {
 
-  constructor() { }
+  resumeLink = '';
+
+  constructor(private http: HttpClient) {
+    this.http.get('https://admin.ikehunter.com/wp-json/wp/v2/resumes')
+
+    .subscribe(data => {
+      for (const key in Object.keys(data)) {
+        if (data[key]) {
+          // console.log(data[key].resume.guid);
+          this.resumeLink = data[key].resume.guid;
+        }
+      }
+    });
+  }
+
+
 
   ngOnInit() {
+    // console.log(this.resumeLink);
   }
 
 }

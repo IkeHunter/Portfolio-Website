@@ -17,7 +17,7 @@
 
     text-align: center;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       flex: 0 0 100%;
     }
 
@@ -29,11 +29,12 @@
   &__card {
     $left-margin: 10%;
     flex: 0 0 50%;
+    flex-wrap: wrap;
     color: $color-grey;
     display: flex;
     justify-content: flex-start;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       flex: 0 0 100%;
       justify-content: center;
     }
@@ -42,6 +43,7 @@
     &__container {
       position: relative;
 
+      margin: 2.5rem;
       background-color: $color-white;
       cursor: pointer;
       width: 80%;
@@ -90,7 +92,7 @@
     &--email {
       &:link,
       &:visited {
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-weight: 600;
         color: $color-grey;
         text-decoration: none;

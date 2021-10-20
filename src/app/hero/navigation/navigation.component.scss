@@ -89,16 +89,16 @@
         position: relative;
         padding-bottom: 1rem;
 
-        &::after {
-          content: '';
-          width: 80%;
-          height: 100%;
-          border-bottom: 3px solid $color-primary;
-          position: absolute;
-          top: 0;
-          left: 50%;
-          transform: translateX(-50%);
-        }
+        // &::after {
+        //   content: '';
+        //   width: 80%;
+        //   height: 100%;
+        //   border-bottom: 3px solid $color-primary;
+        //   position: absolute;
+        //   top: 0;
+        //   left: 50%;
+        //   transform: translateX(-50%);
+        // }
 
         @include respond(tab-port) {
           font-size: 2rem;
